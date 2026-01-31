@@ -15,6 +15,8 @@ use App\Http\Controllers\frontend\BookingController;
 // Book Now page
 Route::get('/book', [BookingController::class, 'index']);
 Route::post('/book-now', [BookingController::class, 'store']);
+Route::get('/my-bookings', [BookingController::class, 'myBookings']); // Show bookings page
+
 
 Route::get('/login', [loginController::class, 'index'])->name('login');
 Route::post('/login', [loginController::class, 'login']);
